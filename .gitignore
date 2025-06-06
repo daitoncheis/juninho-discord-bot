@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Ambiente Virtual
+venv/
+.venv/  # Alguns ambientes virtuais podem ser criados como .venv
+
+# Variáveis de Ambiente (MUITO IMPORTANTE!)
+.env
+
+# Arquivos específicos do sistema operacional (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Logs ou outros arquivos gerados (se seu bot criar)
+*.log
