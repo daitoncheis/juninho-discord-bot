@@ -17,8 +17,8 @@ IA_API_KEY = os.getenv('IA_API_KEY')
 print(f"3. Discord Token obtido: {'SIM' if DISCORD_TOKEN else 'NÃO'}")
 print(f"4. IA API Key obtida: {'SIM' if IA_API_KEY else 'NÃO'}")
 
-# --- Escolha da API de IA ---
-USE_GEMINI = False # Mude para False para usar OpenAI
+# --- API de IA ---
+USE_GEMINI = False 
 
 if USE_GEMINI:
     if not IA_API_KEY:
@@ -45,13 +45,11 @@ print("7. Intents configuradas. Inicializando cliente Discord...")
 client = discord.Client(intents=intents)
 print("8. Cliente Discord inicializado.")
 
-# ... (o restante do seu código)
 
 @client.event
 async def on_ready():
     print(f'{client.user} está online! (Mensagem do on_ready)')
-    # Esta forma pode remover o aviso visual no editor,
-    # mas o resultado é o mesmo na prática para este caso.
+   
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -64,8 +62,6 @@ async def on_ready():
 @bot.command(name='hello') #!hello 
 async def hello(ctx):
     await ctx.send('Olá! Eu sou o bot de exemplo.') 
-
-# ... (o restante do seu código)
 
 if DISCORD_TOKEN:
     print("9. Tentando rodar o bot com o token fornecido...")
